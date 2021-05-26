@@ -7,7 +7,7 @@
   "scripts": {
     "start": "npm run build && cross-env NODE_ENV=production node dist/server.js",
     "dev": "cross-env NODE_ENV=development nodemon",
-    "build": "netlify-lambda build express",
+    "build": "tsc && npx tsc-alias",
     "test": "jest --forceExit --detectOpenHandles",
     "lint": "eslint --ignore-path .gitignore --ext .ts src/",
     "lint:fix": "npm run lint -- --fix"
@@ -52,7 +52,6 @@
     "nodemon": "^2.0.7",
     "prettier": "^2.3.0",
     "supertest": "^6.1.3",
-    "tsconfig-paths": "^3.9.0",
-    "netlify-lambda": "^1.6.3"
+    "tsconfig-paths": "^3.9.0"
   }
 }
